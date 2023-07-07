@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hospital Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('../../assets/img/bg2.png');
+      background-position: center top;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .container {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .banner {
+      text-align: center;
+    }
+
+    .banner h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    .card {
+      width: 300px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #777;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    #a {
+      font-size: 80px;
+      line-height: 90px;
+      font-weight: bold;
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+      background-image: url('../../assets/img/back.png');
+      -webkit-background-clip: text;
+      animation: back 20s linear infinite;
+    }
+
+    @keyframes back {
+      100% {
+        background-position: 2000px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <header>
+    <h1>Welcome to E-HealthCare Services</h1>
+  </header> -->
+
+  <div class="container">
+    <div class="banner">
+      <h1 id="a">Providing Quality Healthcare Services</h1>
+      <br><br>
+      <p>Welcome to E-HealthCare, the cost-effective and secure use of information and communications technologies in
+        support of health and health-related fields, including health-care services, health surveillance, health
+        literature, and health education, knowledge and research.</p>
+    </div>
+
+    <div class="card">
+      <img src="../../assets/img/ex1.webp" alt="Doctor 1">
+      <h3>Surgeon</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="card">
+      <img src="../../assets/img/ex2.webp" alt="Doctor 2">
+      <h3>Neurologist</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="card">
+      <img src="../../assets/img/ex3.jpg" alt="Doctor 3">
+      <h3>Psychiartist</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 E-HealthCare. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

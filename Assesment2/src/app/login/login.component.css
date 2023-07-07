@@ -1,0 +1,78 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-image: url('../../assets/img/bg.avif');
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px; /* Adjust the top spacing as needed */
+}
+
+.login-container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333333;
+  text-align: center;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #555555;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 91%;
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.login-container .button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container button {
+  display: block;
+  padding: 12px 20px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+footer p {
+  margin: 0;
+}

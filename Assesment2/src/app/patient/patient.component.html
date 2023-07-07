@@ -1,0 +1,24 @@
+<div *ngIf="activeDoctors.length > 0; else noDoctors" class="doctor-cards">
+  <h1>Active Doctors:</h1>
+  <div class="card-container">
+    <div *ngFor="let doctor of activeDoctors" class="card shadow doctor-card">
+      <div class="card-body">
+        <img [src]="ImagePath2" alt="Doctor Image" class="doctor-image" width="300px">
+        <br><br><br>
+        <h5 class="card-title">{{ doctor.dName }}</h5>
+        <h5 class="card-subtitle">ID: {{ doctor.dId }}</h5>
+        <p class="card-text">Specialization: {{ doctor.dSpecialization }}</p>
+        <p class="card-text">Address: {{ doctor.dAddress }}</p>
+        <p class="card-text">Mobile Number: {{ doctor.dMobileNumber }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noDoctors>
+  <p>No active doctors found.</p>
+</ng-template>
+
+<footer>
+  <p>&copy; 2023 E-HealthCare. All rights reserved.</p>
+</footer>

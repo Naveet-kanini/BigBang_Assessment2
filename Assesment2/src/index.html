@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Assesment2</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+    
+    var titles = [
+      "💉",
+      "💉🚑",
+      "💉🚑🧑‍⚕️",
+      "💉🚑🧑‍⚕️👩‍⚕️",
+      "💉🚑🧑‍⚕️👩‍⚕️🏥",
+      "💉🚑🧑‍⚕️👩‍⚕️🏥🩺",
+      "💉🚑🧑‍⚕️👩‍⚕️🏥🩺💊",
+      "💉🚑🧑‍⚕️👩‍⚕️🏥🩺💊🩻",
+      "💉🚑🧑‍⚕️👩‍⚕️🏥🩺💊🩻⏱️"
+    ];
+
+    var currentIndex = 0;
+
+    function rotateTitle() {
+      document.title = titles[currentIndex];
+      currentIndex = (currentIndex + 1) % titles.length;
+      setTimeout(rotateTitle, 700);
+    }
+
+    window.addEventListener("load", function() {
+      rotateTitle();
+    });
+
+    function moveBox(e) {
+            TweenMax.to('#mouse-trail', 0.35, {
+                css: {
+                    left: e.pageX,
+                    top: e.pageY
+                }, ease: SlowMo.easeIn
+            }
+            );
+        }
+
+        $(window).on('mousemove', moveBox);
+
+  </script>
+  <style>
+    #mouse-trail {
+        background: black;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        opacity: 0.4;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        pointer-events: none;
+    }
+    </style>
+</head>
+<body class="mat-typography">
+  <div id="mouse-trail"></div>
+  <app-root></app-root>
+</body>
+</html>

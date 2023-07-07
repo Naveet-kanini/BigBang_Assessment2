@@ -1,0 +1,86 @@
+<style>
+  nav {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul li i {
+    margin-right: 5px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+</style>
+
+<nav>
+  <div>
+    <a routerLink="/home">
+      <img [src]='ImagePath' alt="Logo" class="logo">
+    </a>
+  </div>
+  <ul>
+    <li>
+      <a routerLink="/doctor">
+        <i class="fas fa-user-md"></i>Admin
+      </a>
+    </li>
+    <li>
+      <a routerLink="/patient">
+        <i class="fas fa-user"></i>Patient
+      </a>
+    </li>
+    <li>
+      <a routerLink="/login">
+        <i class="fas fa-sign-in-alt"></i>Login
+      </a>
+    </li>
+    <li>
+      <a routerLink="/Registration">
+        <i class="fas fa-user-plus"></i>Registration
+      </a>
+    </li>
+    <li>
+      <a routerLink="/doctordetails">
+        <i class="fas fa-user-md"></i>Doctor
+      </a>
+    </li>
+    <li>
+      <a routerLink="/appointment">
+        <i class="fas fa-calendar"></i>Appointment
+      </a>
+    </li>
+    <li>
+      <a routerLink="/patientDetail">
+        <i class="fa fa-address-book"></i>PD
+      </a>
+    </li>
+    <li>
+      <a routerLink="/logout">
+        <i class="fas fa-sign-out-alt"></i>Logout
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
